@@ -1,1 +1,1 @@
-# BMMB-852-lmm-week1
+# BMMB-852-lmm
