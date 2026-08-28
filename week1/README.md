@@ -75,5 +75,100 @@ You can read this file by using the 'head' command
     Thu Aug 27 13:08:16 EDT 2026
 ```
 
+From here, we can copy or move a file into a separate directory as well:
+```bash
+    laurenmags@Leaftop ~/work/week1
+    $ mv date.txt testdir
+    
+    laurenmags@Leaftop ~/work/week1
+    $ ls testdir
+    date.txt
+    
+    laurenmags@Leaftop ~/work/week1
+    $ ls
+    README.md  test.txt  testdir
+```
+and
+```bash
+    laurenmags@Leaftop ~/work/week1
+    $ cp test.txt testdir/
+    
+    laurenmags@Leaftop ~/work/week1
+    $ ls testdir
+    date.txt  test.txt
+```
+Notice how the moved file 'date.txt' no longer appears in the 'week1' directory but does now appear in the 'testdir' directory. 
+Also notice that the copied file 'test.txt' is present in both directories. 
+
+## Accessing a File Quickly from your Home Directory
+
+Now let's zoom out a bit from where we are. To give yourself some perspective of your location, use the 'pwd' command to print your working directory, or your current location.
+```bash
+    laurenmags@Leaftop ~/work/week1
+    $ pwd
+    /home/laurenmags/work/week1
+```
+The ~ symbol represents your home directory, so let's navigate back there using the 'cd' command. You can do this the long way:
+```bash
+    laurenmags@Leaftop ~/work/week1
+    $ cd /home/laurenmags/
+    
+    laurenmags@Leaftop ~
+    $
+```
+Or the short way:
+```bash
+    laurenmags@Leaftop ~/work
+    $ cd ~
+    
+    laurenmags@Leaftop ~
+    $
+```
+
+Since we have created many new directories and files now, let's install and use the 'tree' command to get a visual map of what our navigation options are. To add the tree command, start by activating your bioinfo environment with 'bioinfo', then enter 'pixi add tree'. Now you can use the tree command. To avoid clutter, I am going to make a tree specifically for my 'work' directory:
+```bash
+    laurenmags@Leaftop ~
+    $ tree work
+    work
+    ├── snpcall
+    │   ├── Makefile
+    │   ├── adapter.fa
+    │   ├── bam
+    │   │   ├── SRR1553425-AF086833.bam
+    │   │   └── SRR1553425-AF086833.bam.bai
+    │   ├── fastq
+    │   │   ├── SRR1553425_1.fastq
+    │   │   ├── SRR1553425_1P.fq
+    │   │   ├── SRR1553425_1U.fq
+    │   │   ├── SRR1553425_2.fastq
+    │   │   ├── SRR1553425_2P.fq
+    │   │   └── SRR1553425_2U.fq
+    │   ├── refs
+    │   │   ├── AF086833.fa
+    │   │   ├── AF086833.fa.amb
+    │   │   ├── AF086833.fa.ann
+    │   │   ├── AF086833.fa.bwt
+    │   │   ├── AF086833.fa.fai
+    │   │   ├── AF086833.fa.pac
+    │   │   ├── AF086833.fa.sa
+    │   │   └── AF086833.gff
+    │   ├── snpcall.2026.mk
+    │   └── vcf
+    │       ├── SRR1553425-AF086833.vcf.gz
+    │       └── SRR1553425-AF086833.vcf.gz.csi
+    ├── week1
+    │   ├── README.md
+    │   ├── test.txt
+    │   └── testdir
+    │       ├── date.txt
+    │       └── test.txt
+    └── week2
+    
+    9 directories, 25 files
+```
+Now we can easily look at the path to get to a file, such as the 'test.txt' file. 
+
+
+
 
 
