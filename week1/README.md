@@ -168,6 +168,36 @@ Since we have created many new directories and files now, let's install and use 
 ```
 Now we can easily look at the path to get to a file, such as the 'test.txt' file. 
 
+To instantly change to the directory that contains the 'test.txt' file, we can enter the following path after the 'cd' command:
+```bash
+    laurenmags@Leaftop ~
+    $ cd ~/work/week1/testdir/
+    
+    laurenmags@Leaftop ~/work/week1/testdir
+    $ ls
+    date.txt  test.txt
+```
+Now the files are right there and can be accessed easily. You can even open them in the terminal using the 'less' command. Press 'Q' to exit the viewer. 
+
+A more roundabout way of navigating to the file can also be done as such:
+```bash
+    laurenmags@Leaftop ~/work/week1/testdir
+    $ cd ~
+    
+    laurenmags@Leaftop ~
+    $ cd work
+    
+    laurenmags@Leaftop ~/work
+    $ cd week1
+    
+    laurenmags@Leaftop ~/work/week1
+    $ cd testdir
+    
+    laurenmags@Leaftop ~/work/week1/testdir
+    $ ls
+    date.txt  test.txt
+```
+This navigates step by step, changing directories individually. This allows you to better visualize where you are, but takes longer. 
 
 
 
