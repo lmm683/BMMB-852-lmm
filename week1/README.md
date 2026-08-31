@@ -7,41 +7,49 @@ Before using the 'samtools' command, you must first activate the bioinfo environ
 Then, when you type 'samtools' into the terminal, a large response will pop up containing the samtools program version followed by a long list of commands
 
 My samtools version shows up as follows:
+
 ```bash
-    Program: samtools (Tools for alignments in the SAM format)
-    Version: 1.24 (using htslib 1.24)
+Program: samtools (Tools for alignments in the SAM format)
+Version: 1.24 (using htslib 1.24)
 ```
 
 ## Commands Needed to Create A Nested Directory
 
 Start by listing your directories using the 'ls' command. This will display itself as such:
+
 ```bash
-    laurenmags@Leaftop ~
-    $ ls
-    edirect  edu  snap  snpcall.2026.mk  work
+laurenmags@Leaftop ~
+$ ls
+edirect  edu  snap  snpcall.2026.mk  work
 ```
+
 As you can see, my directories currently consist of edirect, edu, snap, snpcall.2026.mk, and work. We are mainly going to be focusing on the 'work' directory. 
 
 Next, change your directory using the 'cd' command. I am going to change my directory to 'work' Here is how this is entered:
+
 ```bash
-    laurenmags@Leaftop ~
-    $ cd work/
-    
-    laurenmags@Leaftop ~/work
-    $
+laurenmags@Leaftop ~
+$ cd work/
+
+laurenmags@Leaftop ~/work
+$
 ```
+
 Notice how the new directory is shown next to the user on the next line after switching the directory. This helps the user keep track of where they are working. 
 
 Next, since this is week one, we are going to make a new directory underneath the 'work' directory:
+
 ```bash
-    laurenmags@Leaftop ~/work
-    $ mkdir week1
+laurenmags@Leaftop ~/work
+$ mkdir week1
 ```
+
 Now when we do the ls command (within the 'work' directory!) the directories within the 'work' directory will be displayed, including our new 'week1' directory
+
 ```bash
-    laurenmags@Leaftop ~/work
-    $ ls
-    snpcall  week1
+laurenmags@Leaftop ~/work
+$ ls
+snpcall  week1
 ```
 Now we have created a directory within a directory! 
 
