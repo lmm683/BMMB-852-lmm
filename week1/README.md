@@ -15,11 +15,15 @@ Version: 1.24 (using htslib 1.24)
 
 ## Commands Needed to Create A Nested Directory
 
-Start by listing your directories using the 'ls' command. This will display itself as such:
+Start by listing your directories using the 'ls' command:
 
 ```bash
-laurenmags@Leaftop ~
-$ ls
+ls
+```
+
+This will list all your directories and files in your current directory:
+
+```bash
 edirect  edu  snap  snpcall.2026.mk  work
 ```
 
@@ -28,20 +32,20 @@ As you can see, my directories currently consist of edirect, edu, snap, snpcall.
 Next, change your directory using the 'cd' command. I am going to change my directory to 'work' Here is how this is entered:
 
 ```bash
-laurenmags@Leaftop ~
-$ cd work/
+cd work
+```
 
+Notice how the new directory is shown next to the user on the next line after switching the directory. This helps the user keep track of where they are working. This shows up for me as:
+
+```bash
 laurenmags@Leaftop ~/work
 $
 ```
 
-Notice how the new directory is shown next to the user on the next line after switching the directory. This helps the user keep track of where they are working. 
-
 Next, since this is week one, we are going to make a new directory underneath the 'work' directory:
 
 ```bash
-laurenmags@Leaftop ~/work
-$ mkdir week1
+mkdir week1
 ```
 
 Now when we do the ls command (within the 'work' directory!) the directories within the 'work' directory will be displayed, including our new 'week1' directory
@@ -56,57 +60,53 @@ Now we have created a directory within a directory!
 ## Creating and Manipulating a File
 
 Using the same steps shown before, we are going to move into the week1 directory:
+
 ```bash
-    laurenmags@Leaftop ~/work
-    $ cd week1
-    
-    laurenmags@Leaftop ~/work/week1
-    $
+cd week1
 ```
 
 Now, we are going to create a file two different ways. First, we are going to create an empty file using the 'touch' command:
+
 ```bash
-    laurenmags@Leaftop ~/work/week1
-    $ touch test.txt
+touch test.txt
 ```
+
 You can confirm that the file has been created with the 'ls' command
 
 Second, the other way to create a file is by directly putting information into a new file. I will demonstrate this with the 'date' command. The 'date' command typically outputs the date, pretty intuitive, but as you will see with the '>' tool, the output will be dumped into the created file:
+
 ```bash
-    laurenmags@Leaftop ~/work/week1
-    $ date > date.txt
+date > date.txt
 ```
-You can read this file by using the 'head' command
+
+You can read this file by using the 'head' command:
+
 ```bash
-    laurenmags@Leaftop ~/work/week1
-    $ head date.txt
+head date.txt
     Thu Aug 27 13:08:16 EDT 2026
 ```
 
+Which prints the date:
+
+```bash
+Thu Aug 27 13:08:16 EDT 2026
+```
+
 From here, we can copy or move a file into a separate directory as well:
+
+Moving:
+
 ```bash
-    laurenmags@Leaftop ~/work/week1
-    $ mv date.txt testdir
-    
-    laurenmags@Leaftop ~/work/week1
-    $ ls testdir
-    date.txt
-    
-    laurenmags@Leaftop ~/work/week1
-    $ ls
-    README.md  test.txt  testdir
+ mv date.txt testdir
 ```
-and
+
+Copying:
+
 ```bash
-    laurenmags@Leaftop ~/work/week1
-    $ cp test.txt testdir/
-    
-    laurenmags@Leaftop ~/work/week1
-    $ ls testdir
-    date.txt  test.txt
+cp test.txt testdir/
 ```
-Notice how the moved file 'date.txt' no longer appears in the 'week1' directory but does now appear in the 'testdir' directory. 
-Also notice that the copied file 'test.txt' is present in both directories. 
+
+Use the "ls" command to ensure that the files have moved and copied as intended. 
 
 ## Accessing a File Quickly from your Home Directory
 
