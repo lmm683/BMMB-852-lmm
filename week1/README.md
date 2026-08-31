@@ -102,7 +102,7 @@ Moving:
 Copying:
 
 ```bash
-cp test.txt testdir/
+cp test.txt testdir
 ```
 
 Use the "ls" command to ensure that the files have moved and copied as intended. 
