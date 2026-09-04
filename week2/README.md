@@ -1,3 +1,4 @@
+Must be in bioinfo in designated directory
 
 Files were loaded manually into IGV
 
