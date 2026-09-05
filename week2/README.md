@@ -1,3 +1,39 @@
+### Week 2 Assignment - Visualizing Genomic Data
+
+# Setting Yourself Up
+
+Start off by opening your coding & coding assistant software of choice. I am using VS Code for this assignment. 
+
+Next, using the skills learned from week 1, move into your work directory where you are keeping your weekly assignments. 
+
+Create a new directory for week 2:
+
+```bash
+mkdir week2
+```
+
+Within your new week2 directory, you can make your new README.md file as well as another directory/folder we will call igv
+
+```bash
+# make new Read Me file
+touch README.md
+
+# make igv folder
+mkdir igv
+```
+
+Finally, activate your bioinformatics environment:
+
+```bash
+bioinfo
+```
+Now we can begin!
+
+
+
+
+
+
 Must be in bioinfo in designated directory
 
 Files were loaded manually into IGV
