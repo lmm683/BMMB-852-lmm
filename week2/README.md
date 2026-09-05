@@ -61,6 +61,9 @@ To look at the genomic data you have now downloaded, ensure that you have igv in
 
 <img width="2268" height="946" alt="image" src="https://github.com/user-attachments/assets/5f7648ab-a80b-4643-9d08-fb6b45cf1555" />
 
+The data displayed on the two available tracks is the raw sequence of base pairs (FASTA file data)
+and the amino acids that the codons likely code for (GFF3 file data).
+
 The size of the FASTA file is 21,007 KB (kilobytes), which is very roughly around 21,007,000 bp (base pairs). I am specifically observing the ZBAI_A_scaffold_001 chromosome, which is 41kb (kilobases)
 
 As you can see, there are no annotations to this file besides a GFF3 file. 
@@ -83,9 +86,19 @@ Flipped sequence:
 
 <img width="2246" height="796" alt="image" src="https://github.com/user-attachments/assets/068c57cf-d25b-4583-a714-810fd56de8e3" />
 
+The gene that contains my selected coordinate is a protein encoding gene that likely is subunit 16 of a protein that  mediates RNA polymerase II transcription:
+
+<img width="1074" height="298" alt="image" src="https://github.com/user-attachments/assets/d37ca2f1-956f-4705-b2f2-447466380711" />
+
+The colors of the genes are customizable by their strand orientation:
+
+<img width="2256" height="650" alt="image" src="https://github.com/user-attachments/assets/ef61c3ac-6bb9-4769-a756-7b351d7e8d1e" />
+
+Teal is positive orientation while pink is negative orientation.
+
+You can also expand the view of the genes to get a better look at each of them:
+
+<img width="2254" height="1014" alt="image" src="https://github.com/user-attachments/assets/72ff2670-9503-453e-b854-79cf61f72ca2" />
 
 
-The data displayed on the two available tracks is the raw sequence of base pairs (FASTA file data)
-and the amino acids that the codons likely code for (GFF3 file data).
 
-The gene that contains my selected coordinate is a protein encoding gene that likely is subunit 16 of a protein that  mediates RNA polymerase II transcription.
