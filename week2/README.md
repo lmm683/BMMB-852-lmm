@@ -71,15 +71,19 @@ This genomic build honestly does not seem very refined, there is not much descri
 
 Using the browser, I can estimate that the genes (shown by the GFF file) are roughly 200-2,000 bp apart.
 
+When you zoom in, you can get a better look at the sequence:
+
+<img width="2242" height="756" alt="image" src="https://github.com/user-attachments/assets/d1739257-6933-4daa-976a-27e8763adc68" />
+
+I have switched the sequence translation to 'mitochondrial yeast', since Z. bailii is a yeast. 
+
+Notice how in the screenshot, I have the sequence expanded to have the three different codon reading frames possible displayed. If we pick one coordinate (base pair) to look at the potential codons it could be in, we can easily see each amino acid it might code for. For example, if we look at coordinate 24,509 of this first chromosome, an A-T base pair, we can see that it might be a part of a codon for I, T, or Y on this side of the chromosome. If we flip the strand, the other side of the base pair could be a part of the codon for K, N, or M.
+
+Flipped sequence:
+
+<img width="2246" height="796" alt="image" src="https://github.com/user-attachments/assets/068c57cf-d25b-4583-a714-810fd56de8e3" />
 
 
-Switched translation to mitochondrial yeast, since Z.bailii is a yeast
-
-Selected coordinate:
-ZBAI_A_scaffold_001:24,509
-This base pair could be a part of the codon for I, T, or Y on one side of the chromosome
-When you flip the strand, the other side of this base pair could be a part of the codon for K, N, or M.
-It is an A-T base pair. 
 
 The data displayed on the two available tracks is the raw sequence of base pairs (FASTA file data)
 and the amino acids that the codons likely code for (GFF3 file data).
