@@ -1,6 +1,6 @@
-### Week 2 Assignment - Visualizing Genomic Data
+# Week 2 Assignment - Visualizing Genomic Data
 
-# Setting Yourself Up
+### Setting Yourself Up
 
 Start off by opening your coding & coding assistant software of choice. I am using VS Code for this assignment. 
 
@@ -29,10 +29,13 @@ bioinfo
 ```
 Now we can begin!
 
+## Obtaining Genomic Information
 
+We are going to create a Makefile for downloading the FASTA and GFF files for a set of genomic data. Before we do this, however, we must select what organism we want to obtain the genomic data of!
 
+After you've found a link that contains downloads for the genomic data of the organism you chose, a Makefile can be created. 
 
-
+I chose [Zygosaccharomyces bailii](https://jun2026-fungi.ensembl.org/Zygosaccharomyces_bailii_isa1307_gca_000530735/Info/Index), which is [a yeast found in kombucha cultures](https://pmc.ncbi.nlm.nih.gov/articles/PMC7027524/#jfds14992-sec-0120)
 
 Must be in bioinfo in designated directory
 
