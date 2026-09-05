@@ -55,21 +55,23 @@ make gff
 make clean
 ```
 
-Must be in bioinfo in designated directory
+## Visualizing the Genome 
 
-Files were loaded manually into IGV
+To look at the genomic data you have now downloaded, ensure that you have igv installed. I manually loaded the FASTA and GFF files into my igv browser. You can do this by first opening the FASTA file from the Genomes Tab -> Load Genome from FIle. You can then open the GFF file from the File tab -> Load from File. Your browser should then look like this:
 
-Size of FASTA file: 21,007 KB
-I am specifically observing the ZBAI_A_scaffold_001 chromosome, which is 41kb
-There are no annotations to this file, besides a GFF3 file if that counts. 
-It seems like there 85 chromosomes, some chromosomes only have side recorded and others have both. 
+<img width="2268" height="946" alt="image" src="https://github.com/user-attachments/assets/5f7648ab-a80b-4643-9d08-fb6b45cf1555" />
+
+The size of the FASTA file is 21,007 KB (kilobytes), which is very roughly around 21,007,000 bp (base pairs). I am specifically observing the ZBAI_A_scaffold_001 chromosome, which is 41kb (kilobases)
+
+As you can see, there are no annotations to this file besides a GFF3 file. 
+
+Looking at the list of scaffolds, there seems to be 85 chromosomes in this genome. Some chromosomes only have side recorded and others have both. 
+
 This genomic build honestly does not seem very refined, there is not much described besides the nucleotides and amino acids (or so it seems), and the number of chromosomes is not super clear.
 
-You can run the makefile by using the command 'make' 
-This will download two folders, a fasta folder and a gff folder, each folder containing respective files to use in igv. 
-You can clean up the folders & files by using the command 'make clean'
+Using the browser, I can estimate that the genes (shown by the GFF file) are roughly 200-2,000 bp apart.
 
-The genes are roughly 200-2,000 bp apart
+
 
 Switched translation to mitochondrial yeast, since Z.bailii is a yeast
 
