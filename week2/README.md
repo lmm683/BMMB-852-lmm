@@ -88,7 +88,7 @@ Flipped sequence:
 
 The gene that contains my selected coordinate is a protein encoding gene that likely is subunit 16 of a protein that  mediates RNA polymerase II transcription:
 
-<img width="1074" height="298" alt="image" src="https://github.com/user-attachments/assets/d37ca2f1-956f-4705-b2f2-447466380711" />
+<img width="537" height="149" alt="image" src="https://github.com/user-attachments/assets/d37ca2f1-956f-4705-b2f2-447466380711" />
 
 The colors of the genes are customizable by their strand orientation:
 
