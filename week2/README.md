@@ -37,6 +37,24 @@ After you've found a link that contains downloads for the genomic data of the or
 
 I chose [Zygosaccharomyces bailii](https://jun2026-fungi.ensembl.org/Zygosaccharomyces_bailii_isa1307_gca_000530735/Info/Index), which is [a yeast found in kombucha cultures](https://pmc.ncbi.nlm.nih.gov/articles/PMC7027524/#jfds14992-sec-0120)
 
+You can then use your coding assistant to develop a Makefile to download the FASTA and GFF files and organize them into your igv directory. My [Makefile](https://github.com/lmm683/BMMB-852-lmm/blob/main/week2/igv/Makefile), when run while in the igv directory, creates two new directories for the FASTA and GFF files respectively, downloads each of the files, ensures they are unzipped, renames them to z.bailii.(file type), and moves them into their corresponding directories. 
+
+The Makefile can be used by running the following commands in your terminal:
+
+```bash
+# Download & organize both FASTA and GFF files
+make
+
+# Download & organize just the FASTA file
+make fasta
+
+# Download & organize just the GFF file
+make gff
+
+# Remove the FASTA and GFF files & directories
+make clean
+```
+
 Must be in bioinfo in designated directory
 
 Files were loaded manually into IGV
