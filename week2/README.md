@@ -66,7 +66,27 @@ and the amino acids that the codons likely code for (GFF3 file data).
 
 The size of the FASTA file is 21,007 KB (kilobytes), which is very roughly around 21,007,000 bp (base pairs). I am specifically observing the ZBAI_A_scaffold_001 chromosome, which is 41kb (kilobases)
 
-As you can see, there are no annotations to this file besides a GFF3 file. 
+You can find the number of annotations on the GFF file from the following command:
+
+```bash
+awk '!/^#/ && NF>=3 {count[$3]++; total++} END {for (k in count) print k, count[k]; print "TOTAL", total}' /home/laurenmags/work/week2/igv/gff/Z.bailii.gff3 | sort -k2,2nr
+```
+In your case, the file path will look different and reflect your personal file path. 
+
+This command prints a list of all the annotation details:
+
+```bash
+TOTAL 43090
+exon 10757
+CDS 10240
+gene 9925
+mRNA 9925
+biological_region 1055
+ncRNA_gene 517
+tRNA 514
+supercontig 154
+rRNA 3
+```
 
 Looking at the list of scaffolds, there seems to be 85 chromosomes in this genome. Some chromosomes only have side recorded and others have both. 
 
