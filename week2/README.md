@@ -90,7 +90,7 @@ rRNA 3
 
 Looking at the list of scaffolds, there seems to be 85 chromosomes in this genome. Some chromosomes only have side recorded and others have both. 
 
-This genomic build honestly does not seem very refined, there is not much described besides the nucleotides and amino acids (or so it seems), and the number of chromosomes is not super clear.
+This genomic build seems somewhat refined. The genes are all marked, but the number of chromosomes is not super clear.
 
 Using the browser, I can estimate that the genes (shown by the GFF file) are roughly 200-2,000 bp apart.
 
