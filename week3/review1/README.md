@@ -14,9 +14,21 @@ The README clearly identifies the TMV accession, explains genome completeness, d
 
 The Makefile is concise and reproducible. It creates separate output directories, uses explicit accession-based filenames, and uses `curl --fail --location --retry 3`. The main improvement I would suggest is adding a small `count` target for the GFF3 feature count described in the README, so the documented check is also available through `make`.
 
-## Comparison With My Work
+## Comparison With My Week 2 Lamin Analysis
 
-Susan's workflow is shorter and easier to read than a workflow that includes unnecessary intermediate archive files. The variables are grouped clearly, and the output paths are predictable. The README also explains the biological interpretation rather than only recording commands.
+My Week 2 analysis downloads *Zygosaccharomyces bailii* FASTA and GFF3 files
+into `week2/igv/fasta` and `week2/igv/gff`, indexes the FASTA, and then uses IGV
+to inspect sequence frames, strand orientation, chromosome context, and
+annotation counts. Susan's workflow is more compact: it downloads the TMV
+FASTA and GFF3 directly from NCBI with `curl` and keeps the files in separate
+top-level `fasta/` and `gff/` directories.
+
+Susan's Makefile is easier to audit because it uses explicit accession-based
+outputs and no archive-extraction step. My Lamin workflow has the advantage of
+documenting a larger genome, a selected coordinate, both strand orientations,
+and an IGV interpretation. Both workflows are reproducible, but Susan's
+Makefile has stronger failed-download handling while my README gives more
+detail about the biological inspection performed after downloading.
 
 ## Proposed Edits
 

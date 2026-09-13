@@ -16,9 +16,22 @@ The workflow is reproducible because variables define the accession, species, ou
 
 One clarity issue is that the Week 02 `clean` recipe removes directories after separately naming files for removal. The directory removal already removes those files, so the redundant file-removal line can be deleted. The README should also show the exact command used to count annotation features.
 
-## Comparison With My Work
+## Comparison With My Week 2 Lamin Analysis
 
-Lauren's Makefile groups variables logically and derives URLs and output paths from them. Its targets form a clear dependency graph, and completed output files prevent unnecessary downloads. This is easier to inspect than a workflow with hard-coded paths and unrelated cleanup commands.
+My Week 2 analysis downloads *Zygosaccharomyces bailii* data from Ensembl,
+places the FASTA and GFF3 files in `week2/igv/fasta` and `week2/igv/gff`,
+indexes the FASTA, and uses IGV to examine a selected chromosome region,
+reading frames, strand orientation, and annotation counts. Lauren's workflow
+uses the same general reproducible pattern of a Makefile plus IGV, but her
+workflow is organized around separate `fasta` and `gff` targets and explicit
+Ensembl variables for the species, assembly, release, URLs, and output files.
+
+Compared with my Lamin workflow, Lauren's Makefile makes the download targets
+and output names especially easy to inspect. My README gives more detailed
+biological interpretation of the IGV view, including the selected coordinate
+and frame/strand observations. Lauren's Week 03 workflow also adds a summary
+target that reports genome size, sequence count, and annotation feature count,
+which is a useful reproducibility check that my Lamin workflow should include.
 
 ## Proposed Edits
 
