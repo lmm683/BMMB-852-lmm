@@ -10,7 +10,7 @@ GFF_FILE := Zygosaccharomyces_bailii_isa1307_gca_000530735.$(ASSEMBLY).$(RELEASE
 FASTA_URL := $(BASE_URL)/fasta/fungi_ascomycota1_collection/$(SPECIES)/dna/$(FASTA_FILE)
 GFF_URL := $(BASE_URL)/gff3/fungi_ascomycota1_collection/$(SPECIES)/$(GFF_FILE)
 
-.PHONY: all fasta gff clean
+.PHONY: all fasta gff count clean
 
 FASTA_DIR := fasta
 GFF_DIR := gff
@@ -25,13 +25,14 @@ gff: $(GFF_OUTPUT)
 
 $(FASTA_OUTPUT):
 	mkdir -p $(FASTA_DIR)
-	wget --continue --no-verbose --output-document=$@.gz $(FASTA_URL)
-	gunzip -c $@.gz > $@ && rm -f $@.gz
+	if [ -f "$@" ]; then echo "FASTA already exists: $@"; else wget --continue --no-verbose --output-document=$@.gz $(FASTA_URL) && gunzip -c $@.gz > $@ && rm -f $@.gz; fi
 
 $(GFF_OUTPUT):
 	mkdir -p $(GFF_DIR)
-	wget --continue --no-verbose --output-document=$@.gz $(GFF_URL)
-	gunzip -c $@.gz > $@ && rm -f $@.gz
+	if [ -f "$@" ]; then echo "GFF3 already exists: $@"; else wget --continue --no-verbose --output-document=$@.gz $(GFF_URL) && gunzip -c $@.gz > $@ && rm -f $@.gz; fi
+
+count: $(GFF_OUTPUT)
+	awk '!/^#/ && NF>=3 { count[$$3]++; total++ } END { for (k in count) print k, count[k]; print "TOTAL", total }' $(GFF_OUTPUT)
 
 clean:
 	rm -f $(FASTA_FILE) $(GFF_FILE) $(FASTA_OUTPUT) $(GFF_OUTPUT)
