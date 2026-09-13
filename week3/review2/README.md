@@ -1,5 +1,32 @@
-# Lauren's Applied Bioinformatics Portfolio
+# Assessment of a student's repository
 
-  This repository contains all of Lauren's BMMB852 assignments, separated by week
+I am reviewing Lauren Magliaro's repository: [BMMB-852-lmm](repository/README.md).
 
-  The program Visual Studio Code is subject to being used in these assignments as needed
+## Security Check
+
+I inspected the Week 02 and Week 03 Makefiles. The workflows download genome and annotation files from Ensembl and NCBI using `wget` or the NCBI `datasets` command. The downloaded files are not executed. The URLs should remain restricted to trusted official sources.
+
+The `clean` targets remove downloaded data directories and generated files. This is useful for reproducing a fresh download, but the README should warn users that the command deletes local data.
+
+## README Evaluation
+
+The repository documents the selected organism, the required tools, and the expected FASTA and GFF outputs. The Week 03 Makefile also reports genome size, sequence count, and annotation feature count, which makes the result easier to check.
+
+The workflow is reproducible because variables define the accession, species, output paths, and download URLs. The `prepare` step checks for existing outputs before downloading again, extracts the archive, moves the relevant files, and removes temporary metadata.
+
+One clarity issue is that the Week 02 `clean` recipe removes directories after separately naming files for removal. The directory removal already removes those files, so the redundant file-removal line can be deleted. The README should also show the exact command used to count annotation features.
+
+## Comparison With My Work
+
+Lauren's Makefile groups variables logically and derives URLs and output paths from them. Its targets form a clear dependency graph, and completed output files prevent unnecessary downloads. This is easier to inspect than a workflow with hard-coded paths and unrelated cleanup commands.
+
+## Proposed Edits
+
+- Add explicit messages when FASTA or GFF outputs already exist.
+- Remove redundant cleanup commands and keep the `clean` target focused on generated data.
+- Put the annotation-count command in the Makefile as a named target.
+- Document required tools such as `wget`, `unzip`, `datasets`, and `awk` near the reproduction commands.
+
+## Pull Request
+
+I would submit these changes as a pull request to the forked repository after testing the Makefile from a clean directory. No pull request was created as part of this local review.
