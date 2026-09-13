@@ -9,8 +9,7 @@ GFF_FILE := Zygosaccharomyces_bailii_isa1307_gca_000530735.$(ASSEMBLY).$(RELEASE
 
 FASTA_URL := $(BASE_URL)/fasta/fungi_ascomycota1_collection/$(SPECIES)/dna/$(FASTA_FILE)
 GFF_URL := $(BASE_URL)/gff3/fungi_ascomycota1_collection/$(SPECIES)/$(GFF_FILE)
-
-.PHONY: all fasta gff clean
+.PHONY: all fasta gff count clean
 
 FASTA_DIR := fasta
 GFF_DIR := gff
@@ -19,9 +18,25 @@ GFF_OUTPUT := $(GFF_DIR)/Z.bailii.gff3
 
 all: fasta gff
 
-fasta: $(FASTA_OUTPUT)
+fasta:
+#check for an existing FASTA file before downloading
+	@if [ -f "$(FASTA_OUTPUT)" ]; then \
+		echo "FASTA file already exists: $(FASTA_OUTPUT)"; \
+	else \
+		$(MAKE) $(FASTA_OUTPUT); \
+	fi
 
-gff: $(GFF_OUTPUT)
+gff:
+#check for an existing GFF file before downloading
+	@if [ -f "$(GFF_OUTPUT)" ]; then \
+		echo "GFF file already exists: $(GFF_OUTPUT)"; \
+	else \
+		$(MAKE) $(GFF_OUTPUT); \
+	fi
+
+#added command from your README to count the number of features in the GFF file and print the total number of features
+count: $(GFF_OUTPUT)
+	@awk '!/^#/ && NF>=3 {count[$$3]++; total++} END {for (k in count) print k, count[k]; print "TOTAL", total}' $(GFF_OUTPUT) | sort -k2,2nr
 
 $(FASTA_OUTPUT):
 	mkdir -p $(FASTA_DIR)
@@ -34,5 +49,4 @@ $(GFF_OUTPUT):
 	gunzip -c $@.gz > $@ && rm -f $@.gz
 
 clean:
-	rm -f $(FASTA_FILE) $(GFF_FILE) $(FASTA_OUTPUT) $(GFF_OUTPUT)
 	rm -rf $(FASTA_DIR) $(GFF_DIR)
