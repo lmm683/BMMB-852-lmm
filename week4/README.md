@@ -44,4 +44,10 @@ make trim
 make opentrim
 ```
 
+## Discussion of QC Methods
+
 I used the quality control method of filtering for quality scores of 25 or higher. This created the slightest difference in the graphs, but it was not enough to change the per base sequence quality overall assessment (X or check). I then changed the quality filter to 34 or higher, which caused a significant enough change in the second fastq file that the per base sequence quality went from an X to an ! and visually looks much stronger. Other than that, no significant change occured for any other part of either report. 
+
+<img width="2766" height="1590" alt="image" src="https://github.com/user-attachments/assets/bf018716-eac7-4ea1-94c8-eef9ed512137" />
+
+<img width="2768" height="1590" alt="image" src="https://github.com/user-attachments/assets/808c00a8-1b43-46d8-889b-d608fe511bc8" />
