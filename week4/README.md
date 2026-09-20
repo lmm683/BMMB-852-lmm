@@ -20,7 +20,7 @@ The list of sources for the DNA is very interesting, most of the sources are a f
 
 ### Before Using the Makefile
 
-must have NCBI SRA Toolkit installed
+You must have NCBI SRA Toolkit installed
 
 ```
 pixi add bioconda::sra-tools
