@@ -4,6 +4,16 @@
 
 ### Variables Needed for Generation
 
+1. URL of the reference genome. Mine can be found [here](http://ftp.ensemblgenomes.org/pub/fungi/release-63/fasta/fungi_ascomycota1_collection/zygosaccharomyces_bailii_isa1307_gca_000530735/dna/Zygosaccharomyces_bailii_isa1307_gca_000530735.Z_bailii_ISA1307_version_3.dna.toplevel.fa.gz)
+
+2. Name of the reference genome. Mine is Zygosaccharomyces_bailii_ISA1307
+
+3. SRR accession number. Mine is SRR12618190
+
+4. Number of reads to download, or "N." mine is 813121
+
+5. Sample name. Mine is DAOMC 209005
+
 ### How to Determine "N"
 
 Start by finding the number of bases in your reference genome and the average number of bases for each sequencing read. Then multiply the number of reference genome bases by the amount of coverage you are aiming for. We will use x10 coverage:
