@@ -37,6 +37,8 @@ Sequencing reads from the FASTQ files are about 260 bases on average
 
 ## Z.bailii BAM Analysis
 
+The full BAM statistics are as follows:
+```
 166126 + 0 in total (QC-passed reads + QC-failed reads)
 135414 + 0 primary
 0 + 0 secondary
@@ -53,22 +55,16 @@ Sequencing reads from the FASTQ files are about 260 bases on average
 358 + 0 singletons (0.26% : N/A)
 6588 + 0 with mate mapped to a different chr
 6007 + 0 with mate mapped to a different chr (mapQ>=5)
+```
 
-The project I chose seems to not actually cover that much of the genome, there is a lot of space in between reads, even with the x10 coverage. 
-Chromosome examples that have a lot of extra coverage (in certain spots)
-A 13
-B 21
-A 44
+The project I chose seems to not actually cover that much of the genome, there is a lot of space in between reads, even with the x10 coverage. I would not consider the coverage to be uniform in the slightest, as the coverage is concentrated in small and far-between spots, with some spots being overly covered and other spots having only a couple reads covering them. 
+
+Chromosome examples that have a lot of extra coverage (in certain spots) include A 13, B 21, and A 44.
 
 Visual of Chromosome A 13
 <img width="2256" height="1196" alt="image" src="https://github.com/user-attachments/assets/60bef575-1f62-4678-9abe-2c4f2d40e1c3" />
 
-
-
-Chromosome examples with low coverage 
-B 77
-B 38
-A 1
+Chromosome examples with low coverage include B 77, B 38, and A 1.
 
 Visual of Chromosome A 1
 <img width="2244" height="1150" alt="image" src="https://github.com/user-attachments/assets/67933735-e651-43aa-bcec-a6f9d4d91780" />
