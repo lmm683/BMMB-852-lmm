@@ -83,7 +83,7 @@ The full BAM statistics are as follows:
 6007 + 0 with mate mapped to a different chr (mapQ>=5)
 ```
 
-I believe 100% of the reads aligned because there are 0 QC-failed reads. 
+97.25% of the reads aligned.
 
 The project I chose seems to not actually cover that much of the genome, there is a lot of space in between reads, even with the x10 coverage. I would not consider the coverage to be uniform in the slightest, as the coverage is concentrated in small and far-between spots, with some spots being overly covered and other spots having only a couple reads covering them. 
 
