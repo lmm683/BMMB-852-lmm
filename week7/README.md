@@ -3,6 +3,9 @@
 ## Before We Begin
 I changed the FASTQ file I chose to get solid coverage of the genome for this assignment. New Run information can be found [here](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR38342019&display=metadata)
 
+This read has much better coverage:
+<img width="2250" height="1186" alt="image" src="https://github.com/user-attachments/assets/09db261e-f866-44c2-8775-c67eb81d380d" />
+
 ## Analysis Questions
 
 ### How many variants were called?
@@ -36,9 +39,16 @@ Looking at the same report, it seems that most of the variants called are SNPs, 
 
 I am only looking at chromosome 1a, since it has the best FASTA genome coverage. On this chromosome, almost all of the variants called look like true variants, there are a couple that are marked as heterozygous and have about half variation half perfect match to the original, so those could be errors or they could be heterozygous. 
 
+Possible heterozygote example, where the dark blue line is in both rows:
+<img width="2278" height="1590" alt="image" src="https://github.com/user-attachments/assets/5670117f-21d2-47b2-9863-6f2e585a0a96" />
+
+
 ### Are the calls supported by the alignments?
 
 Yes, very much so. The sample that I chose to do this comparison for has a significant amount of very clearly demonstrated SNP variants, and all of the variants shown in chromosome 1a are clearly supported across basically all of the reads. 
+
+Visualization of VCF file:
+<img width="2278" height="1590" alt="image" src="https://github.com/user-attachments/assets/9ccefd59-caa6-4da2-ba8a-29934db70f78" />
 
 ## Makefile Commands and Uses
 
