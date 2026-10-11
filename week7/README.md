@@ -1,6 +1,11 @@
+# Week 7 - Generate a VCF File
+
+## Before We Begin
 I changed the FASTQ file I chose to get solid coverage of the genome for this assignment. New Run information can be found [here](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR38342019&display=metadata)
 
-How many variants were called?
+## Analysis Questions
+
+### How many variants were called?
 
 Using the following command:
 
@@ -23,19 +28,19 @@ SN      0       number of multiallelic SNP sites:       60
 
 Looking at the number of records, it seems that 72700 variant instances were called. 
 
-What kinds of variants are present?
+### What kinds of variants are present?
 
 Looking at the same report, it seems that most of the variants called are SNPs, or single nucleotide polymorphisms (subsitutions). There were also a significant amount of indels. I can also see on the visualized vcf file that there are multiple insertions, but this is not explicitly stated in the list of variants called. 
 
-Which calls look like true variants, and which look like errors?
+### Which calls look like true variants, and which look like errors?
 
 I am only looking at chromosome 1a, since it has the best FASTA genome coverage. On this chromosome, almost all of the variants called look like true variants, there are a couple that are marked as heterozygous and have about half variation half perfect match to the original, so those could be errors or they could be heterozygous. 
 
-Are the calls supported by the alignments?
+### Are the calls supported by the alignments?
 
 Yes, very much so. The sample that I chose to do this comparison for has a significant amount of very clearly demonstrated SNP variants, and all of the variants shown in chromosome 1a are clearly supported across basically all of the reads. 
 
-Makefile Commands and uses
+## Makefile Commands and Uses
 
 ```
 # lists files used and term definitions
