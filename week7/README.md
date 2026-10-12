@@ -3,6 +3,19 @@
 ## Before We Begin
 I changed the FASTQ file I chose to get solid coverage of the genome for this assignment. New Run information can be found [here](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR38342019&display=metadata)
 
+#### Updated information:
+
+1. URL of the reference genome. Mine can be found [here](http://ftp.ensemblgenomes.org/pub/fungi/release-63/fasta/fungi_ascomycota1_collection/zygosaccharomyces_bailii_isa1307_gca_000530735/dna/Zygosaccharomyces_bailii_isa1307_gca_000530735.Z_bailii_ISA1307_version_3.dna.toplevel.fa.gz), which was sourced from [this page](http://ftp.ensemblgenomes.org/pub/fungi/release-63/fasta/fungi_ascomycota1_collection/zygosaccharomyces_bailii_isa1307_gca_000530735/dna/)
+
+2. Name of the reference genome. Mine is Zygosaccharomyces_bailii_ISA1307
+
+3. SRR accession number. Mine is SRR38342019, which can be found [here](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR38342019&display=metadata)
+
+4. Number of reads to download, or "N." mine is 1321322
+
+5. Sample name. Mine is PGY799, which was identified [here](https://www.ncbi.nlm.nih.gov/biosample/SAMN57559177)
+
+
 This read has much better coverage:
 <img width="2250" height="1186" alt="image" src="https://github.com/user-attachments/assets/09db261e-f866-44c2-8775-c67eb81d380d" />
 
