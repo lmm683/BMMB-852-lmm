@@ -1,7 +1,7 @@
 # Week 7 - Generate a VCF File
 
 ## Before We Begin
-I changed the FASTQ file I chose to get solid coverage of the genome for this assignment. New Run information can be found [here](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR38342019&display=metadata)
+I changed the FASTQ file I chose to get solid coverage of the genome for this assignment. New Run information can be found [here](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR38342019&display=metadata). I am continuing to use the genome of _Zygosaccharomyces bailii_.
 
 #### Updated information:
 
