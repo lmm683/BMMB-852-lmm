@@ -47,4 +47,32 @@ make clean
 
 ### Some Examples of the Resulting IGV View
 
+IGV Summary View of All Chromosomes
+
+<img width="1098" height="795" alt="image" src="https://github.com/user-attachments/assets/f5c7a52f-9270-4a50-8326-cea03cbcb91e" />
+
+Some Example Views
+
+<img width="412" height="298" alt="image" src="https://github.com/user-attachments/assets/3e85291b-ed29-446a-af9d-21c044e14479" />
+<img width="412" height="298" alt="image" src="https://github.com/user-attachments/assets/6d6ae0f5-8c40-4672-aa24-6d4258c2ca40" />
+<img width="412" height="298" alt="image" src="https://github.com/user-attachments/assets/077f2c3f-96aa-4119-a030-6c0ef7bbac61" />
+<img width="412" height="298" alt="image" src="https://github.com/user-attachments/assets/5e370813-031d-40e7-a795-e13a9ed36497" />
+
 ### Interesting Sections of the Genome 
+
+The last example view has something very interesting going on. There is no variation across any of the samples in specific regions that align with Ribosomal RNA encoding genes, but variation in between the rRNA genes:
+
+<img width="1098" height="795" alt="image" src="https://github.com/user-attachments/assets/26001a92-1e73-4325-840d-8ce22692f4f1" />
+
+The rRNA genes must be highly conserved across strains, which makes sense since rRNA is highly conserved in general. 
+
+Next to the rRNA genes, there is a deletion across all 10 strains, which leads me to think that the reference genome may have an insertion at this location:
+
+<img width="1098" height="795" alt="image" src="https://github.com/user-attachments/assets/837021e6-937a-40f3-bfb5-e08931dcae28" />
+
+
+Another section of a different chromosome exhibits something similar to the rRNA, with zero variation on a gene encoding for a retrotransposon:
+
+<img width="1098" height="795" alt="image" src="https://github.com/user-attachments/assets/8d03e58a-bc63-40ab-91e9-bb74ad6b97fb" />
+
+Once again this must be highly conserved across strains. 
