@@ -36,7 +36,7 @@ make batch
 # Merges the VCF files into one, and separately merges the BAM files into one VCF file. 
 make merge
 
-# Downloads the genome and gff files, runs the batch and merge commands
+# Downloads the genome and gff files, then makes fastq, bam, and vcf files for the default strain
 make all
 
 # Removes the FASTQ, BAM, and VCF files 
