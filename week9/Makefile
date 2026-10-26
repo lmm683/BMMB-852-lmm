@@ -8,7 +8,7 @@ GENOME_FASTA = fna/$(GENOME_NAME).fna
 GFF = gff/$(GENOME_NAME).gff
 
 # SRR accession number
-SRR = EMPTY
+SRR = SRR15292980
 
 # Number of reads to download
 N = 20000
@@ -18,7 +18,7 @@ FASTQ_1 = fastq/$(SRR)_1.fastq
 FASTQ_2 = fastq/$(SRR)_2.fastq
 
 # Sample name 
-SAMPLE_NAME = EMPTY
+SAMPLE_NAME = 10-F1
 
 # BAM file derived from the sample name
 BAM = bam/$(SAMPLE_NAME).bam
@@ -70,6 +70,10 @@ usage:
 	@echo "#"
 	@echo "#" make genome
 	@echo "#" make gff
+	@echo "#" make strainadd
+	@echo "#"
+	@echo "#" To use a design file, use the following commands:
+	@echo "#" 
 	@echo "#" make batch
 	@echo "#" make merge
 	@echo "#"
@@ -139,7 +143,7 @@ $(VCF): $(BAM) $(GENOME_FASTA)
 		bcftools sort --write-index -O z -o $(VCF)
 
 # Run all steps.
-all: genome gff batch merge 
+all: genome gff strainadd
 
 # Visualize with IGV 
 igv: fastq align ${BAM} $(GFF)
