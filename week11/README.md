@@ -6,6 +6,8 @@
 
 Overall the human brain samples have higher gene expression. The universal human reference samples have high expression in a couple areas, and have expression in many of the same areas that the human brain samples have high expression in, but significantly lower expression in those areas. 
 
+<img width="2196" height="1824" alt="image" src="https://github.com/user-attachments/assets/4bc390da-0537-473b-91f6-bc440d584c70" />
+
 #### Navigate across the genome. How consistent are the replicates?
 
 The replicates are extremely consistent within high-coverage areas. There is less consistency with super low (single digit) coverage areas, but that holds much less weight in terms of overall consistency. 
@@ -14,9 +16,13 @@ The replicates are extremely consistent within high-coverage areas. There is les
 
 The BAGE5 gene is not expressed by any of the samples
 
+<img width="2196" height="1590" alt="image" src="https://github.com/user-attachments/assets/3838c08f-2898-4f52-84b2-0e918411733d" />
+
 #### Find a gene that is very strongly expressed in all samples. What is its coverage?
 
 The DDX17 gene is strongly expressed and has similar expression level across all of the samples. It seems to be level 2 expression. Another gene in which a portion is very strongly expressed is the end of the YWHAH gene, with a section of the gene having level 1 expression.
+
+<img width="2196" height="1590" alt="image" src="https://github.com/user-attachments/assets/49c6978a-5ce4-4129-8702-0f288ac5ef29" />
 
 #### Can you identify the transcripts that are expressed? Sometimes you can only exclude some candidates.
 
@@ -26,9 +32,13 @@ Within the DDX17 gene, the DDX17-001 through DDX17-011 transcripts are expressed
 
 The SEPT5 gene has clearly different expression levels between the two samples. For most of the transcrips, the human brain sample has even expression. However, for the universal reference, there is variation of expression within single transcripts, showing higher expression in some parts of the transcript than other parts of the transcript. This could represent the creation of different isoforms from the exons. Across the gene, there is roughly a 4-fold increase in expression in the human brain sample, since the brain sample has an expression level of about 60 (averaged between the samples) and the universal reference has a level of about 15 (averaged between the samples).
 
+<img width="2196" height="1590" alt="image" src="https://github.com/user-attachments/assets/902f5461-954c-426d-9a50-a829f5f93c3f" />
+
 #### Is the transcript upregulated or downregulated?
 
 Since the expression in the brain sample is increased 4-fold, the transcription for the gene is upregulated in the brain sample. 
+
+<img width="2196" height="1590" alt="image" src="https://github.com/user-attachments/assets/269d111f-6468-4cec-9ae0-3fe47bae0883" />
 
 #### How certain are you that it is not a random fluctuation? Why?
 
